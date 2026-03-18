@@ -2,8 +2,13 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.title('Olá')
-st.write('Este é meu primeiro programa em streamlit')
+st.title('Olá, Bem Vindo ao Home!')
+st.header('Esta é a pagina inicial do meu dashboard no Streamlit.')
+st.write('Você pode tanto checar a base de dados quanto olhar a análise realizada.')
+col1, col2 = st.columns(2)
+
+with col1:
+    st.page_link("pages/funcionarios.py", label= "Análise - Funcionários", icon="💻")
 
 st.header('Header')
 st.subheader('Este é um subheader')
