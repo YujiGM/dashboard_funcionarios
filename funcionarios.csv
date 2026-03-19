@@ -1,26 +1,26 @@
-Nome,Idade,Salario,Sexo,Departamento,Cargo
-Ana Silva,32,5800.00,F,Recursos Humanos,Analista de RH
-Carlos Oliveira,45,9200.00,M,Tecnologia,Gerente de TI
-Mariana Santos,28,4300.00,F,Marketing,Assistente de Marketing
-Pedro Almeida,38,7600.00,M,Financeiro,Contador
-Juliana Costa,41,8900.00,F,Tecnologia,Desenvolvedora Sênior
-Roberto Ferreira,55,12000.00,M,Diretoria,Diretor Comercial
-Camila Rocha,26,3800.00,F,Atendimento,Atendente
-Lucas Mendes,34,6500.00,M,Tecnologia,Desenvolvedor Pleno
-Fernanda Lima,29,5100.00,F,Financeiro,Analista Financeiro
-Diego Carvalho,47,10500.00,M,Comercial,Gerente de Vendas
-Patrícia Gomes,33,5600.00,F,Marketing,Analista de Marketing
-Rafael Souza,22,2800.00,M,Atendimento,Estagiário
-Beatriz Martins,37,7200.00,F,Recursos Humanos,Coordenadora de RH
-Thiago Barbosa,50,11000.00,M,Financeiro,CFO
-Amanda Pereira,30,4900.00,F,Comercial,Representante Comercial
-Gustavo Ribeiro,43,8400.00,M,Tecnologia,Arquiteto de Software
-Larissa Nascimento,25,3500.00,F,Marketing,Estagiária
-Felipe Araújo,36,6800.00,M,Recursos Humanos,Analista de RH
-Vanessa Correia,48,9800.00,F,Diretoria,Diretora de Marketing
-Bruno Teixeira,31,5300.00,M,Comercial,Analista de Vendas
-Isabela Fernandes,27,4100.00,F,Tecnologia,Desenvolvedora Júnior
-Rodrigo Pinto,42,8700.00,M,Financeiro,Gerente Financeiro
-Tatiane Moreira,39,7000.00,F,Atendimento,Supervisora de Atendimento
-Henrique Lopes,53,13500.00,M,Diretoria,CEO
-Aline Cardoso,35,6200.00,F,Tecnologia,Analista de Dados
+Nome,Idade,Salario,Sexo,Departamento,Cargo,Senioridade,Contrato
+Ana Silva,32,5800.0,F,Recursos Humanos,Analista de RH,Analista,CLT
+Carlos Oliveira,45,9200.0,M,Tecnologia,Gerente de TI,Gerente,CLT
+Mariana Santos,28,4300.0,F,Marketing,Assistente de Marketing,Analista,CLT
+Pedro Almeida,38,7600.0,M,Financeiro,Contador,Analista,CLT
+Juliana Costa,41,8900.0,F,Tecnologia,Desenvolvedora Sênior,Sênior,CLT
+Roberto Ferreira,55,12000.0,M,Diretoria,Diretor Comercial,Diretoria,PJ
+Camila Rocha,26,3800.0,F,Atendimento,Atendente,Analista,CLT
+Lucas Mendes,34,6500.0,M,Tecnologia,Desenvolvedor Pleno,Pleno,CLT
+Fernanda Lima,29,5100.0,F,Financeiro,Analista Financeiro,Analista,CLT
+Diego Carvalho,47,10500.0,M,Comercial,Gerente de Vendas,Gerente,CLT
+Patrícia Gomes,33,5600.0,F,Marketing,Analista de Marketing,Analista,CLT
+Rafael Souza,22,2800.0,M,Atendimento,Estagiário,Estagiário,Estágio
+Beatriz Martins,37,7200.0,F,Recursos Humanos,Coordenadora de RH,Coordenador,CLT
+Thiago Barbosa,50,11000.0,M,Financeiro,CFO,Diretoria,PJ
+Amanda Pereira,30,4900.0,F,Comercial,Representante Comercial,Analista,CLT
+Gustavo Ribeiro,43,8400.0,M,Tecnologia,Arquiteto de Software,Gerente,CLT
+Larissa Nascimento,25,3500.0,F,Marketing,Estagiária,Estagiário,Estágio
+Felipe Araújo,36,6800.0,M,Recursos Humanos,Analista de RH,Analista,CLT
+Vanessa Correia,48,9800.0,F,Diretoria,Diretora de Marketing,Diretoria,PJ
+Bruno Teixeira,31,5300.0,M,Comercial,Analista de Vendas,Analista,CLT
+Isabela Fernandes,27,4100.0,F,Tecnologia,Desenvolvedora Júnior,Júnior,CLT
+Rodrigo Pinto,42,8700.0,M,Financeiro,Gerente Financeiro,Gerente,CLT
+Tatiane Moreira,39,7000.0,F,Atendimento,Supervisora de Atendimento,Coordenador,CLT
+Henrique Lopes,53,13500.0,M,Diretoria,CEO,Diretoria,PJ
+Aline Cardoso,35,6200.0,F,Tecnologia,Analista de Dados,Analista,CLT

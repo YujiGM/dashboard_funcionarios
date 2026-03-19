@@ -54,14 +54,11 @@ st.dataframe(df_filtrado)
 col1, col2 = st.columns(2)
 
 with col1:
-    st.header('Coluna 1')
-    st.write('Conteúdo da coluna 1.')
+    st.page_link("pages/funcionarios.py", label="Funcionários", icon="🚹")
 
 with col2:
-    st.header('Coluna 2')
-    st.write('Conteúdo da coluna 2.')
+    st.page_link("pages/Departamentos.py", label="Departamentos", icon="🏢")
 
-st.page_link("pages/funcionarios.py", label="Home", icon="🏠")
 
 st.sidebar.header('Filtros.')
 idade_min = st.sidebar.slider('Idade Mínima',0,100,30)
