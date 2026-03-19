@@ -18,9 +18,9 @@ df_dep_idadeM = 0
 dep = df['Departamento'].unique()
 
 df['Cargo'] = (df['Cargo']
-    .str.strip()           # ← remove espaços extras
-    .str.lower()           # ← tudo minúsculo
-    .str.normalize('NFKD') # ← remove acentos
+    .str.strip()       
+    .str.lower()        
+    .str.normalize('NFKD') 
     .str.encode('ascii', errors='ignore')
     .str.decode('utf-8')
 )
@@ -66,13 +66,13 @@ with col1:
 with col2:
     col2.metric('Idade média do setor',f'{df_dep_idadeM:.2f}', border = True, delta_arrow = 'off')
 
-df_sexo_salario = df.groupby('Contrato')['Salario'].mean().reset_index()
-df_sexo_salario.columns = ['Departamento', 'Salario Médio']
+df_contrato_salario = df_dep.groupby('Contrato')['Salario'].mean().reset_index()
+df_contrato_salario.columns = ['Departamento', 'Salario Médio']
 
 st.header('Média Salarial por tipo de contrato', width='stretch',text_alignment='center')
 
 st.bar_chart(
-    df_sexo_salario,
+    df_contrato_salario,
     x='Departamento',
     y='Salario Médio',
     x_label='Contrato (CLT / PJ / Estágio)',
@@ -84,9 +84,10 @@ fig = px.pie(
     df_dep,
     names='Sexo',
     title=f'Distribuição por Sexo — {dep_op}',
-    hole=0.3,   # ← opcional: vira um donut chart
+    hole=0.3, 
 )
+
 fig.update_traces(textinfo='percent+label')
 fig.update_layout(showlegend=False)
 
-st.plotly_chart(fig, use_container_width=True)                       # ← exibe no Streamlit
+st.plotly_chart(fig, use_container_width=True)
