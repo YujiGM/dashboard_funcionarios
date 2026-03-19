@@ -24,11 +24,10 @@ dashboard_funcionarios/
 Página de boas-vindas com navegação para as demais seções e visualização geral da base de dados.
 
 ### 💻 Funcionários (`pages/funcionarios.py`)
-- Tabela completa dos funcionários com salário formatado em R$
-- Filtro por departamento
-- Métricas: média salarial e cargo mais comum do setor
-- Gráfico de pizza: distribuição por sexo
-- Gráfico de barras: salário médio por sexo
+- Filtro por nome do funcionário
+- Métricas: média de idade e cargo mais comum do setor
+- Gráfico de pizza: distribuição por senioridade
+- Gráfico de barras: salário médio por contrato
 
 ### 🏢 Departamentos (`pages/Departamentos.py`)
 - Filtro por departamento
