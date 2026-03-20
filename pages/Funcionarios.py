@@ -72,7 +72,7 @@ with col4:
     df_contrato_salario = df.groupby('Contrato')['Salario'].mean().reset_index()
     df_contrato_salario.columns = ['Departamento', 'Salario Médio']
 
-    st.write('Média de salario por contrato')
+    st.subheader('Média salarial por contrato')
     st.bar_chart(
         df_contrato_salario,
         x='Departamento',

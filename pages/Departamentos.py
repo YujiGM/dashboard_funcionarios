@@ -69,7 +69,21 @@ with col2:
 df_contrato_salario = df_dep.groupby('Contrato')['Salario'].mean().reset_index()
 df_contrato_salario.columns = ['Departamento', 'Salario Médio']
 
-st.header('Média Salarial por tipo de contrato', width='stretch',text_alignment='center')
+col3, col4 = st.columns(2)
+
+idx_maior = df_dep['Salario'].idxmax()
+maior_sal = df_dep.loc[idx_maior, 'Salario']
+maior_sal_cargo = df_dep.loc[idx_maior, 'Cargo'].title()
+
+st.metric(
+    label='Maior Salário do Setor',
+    value=f'R$ {maior_sal:.2f}',
+    delta=f'{maior_sal_cargo}',
+    delta_color='off',
+    border=True,
+    delta_arrow = "off",
+)
+st.header('Média salarial por tipo de contrato do setor', width='stretch',text_alignment='center')
 
 st.bar_chart(
     df_contrato_salario,
@@ -79,6 +93,7 @@ st.bar_chart(
     y_label='Salário Médio (R$)',
     color='Departamento',
 )
+
 
 fig = px.pie(
     df_dep,
