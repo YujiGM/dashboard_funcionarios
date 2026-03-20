@@ -6,7 +6,7 @@ import plotly.express as px
 
 
 st.title('Análise dos :blue[Funcionários!]', width='stretch',text_alignment='center')
-st.header('Arquivo de estudo sobre os funcionários de uma empresa no Streamlit!', width='stretch',text_alignment='center')
+st.header('Relatório sobre os funcionários da empresa no Streamlit!', width='stretch',text_alignment='center')
 
 df = pd.read_csv('funcionarios.csv')
 
@@ -14,7 +14,6 @@ df = pd.read_csv('funcionarios.csv')
 
 df['Cargo'] = (df['Cargo']
     .str.strip()       
-    .str.lower()        
     .str.normalize('NFKD') 
     .str.encode('ascii', errors='ignore')
     .str.decode('utf-8')
@@ -45,6 +44,7 @@ st.data_editor(
         )
     },
     hide_index = True,
+    use_container_width=True,
 )
 
 col1, col2 = st.columns(2)
@@ -56,11 +56,11 @@ with col2:
 
 col3, col4 = st.columns(2)
 
-with col3:    
+with col3:
+    st.subheader('Distribuição por Senioridade', width='stretch',text_alignment='center')
     fig = px.pie(
         df,
         names='Senioridade',
-        title=f'Distribuição por Senioridade',
         hole=0.3, 
     )
 
@@ -72,7 +72,7 @@ with col4:
     df_contrato_salario = df.groupby('Contrato')['Salario'].mean().reset_index()
     df_contrato_salario.columns = ['Departamento', 'Salario Médio']
 
-    st.subheader('Média salarial por contrato')
+    st.subheader('Média salarial por contrato', width='stretch',text_alignment='center')
     st.bar_chart(
         df_contrato_salario,
         x='Departamento',

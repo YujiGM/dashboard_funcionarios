@@ -6,7 +6,7 @@ import plotly.express as px
 
 
 st.title('Análise dos :red[Departamentos!]', width='stretch',text_alignment='center')
-st.header('Arquivo de estudo sobre os departamentos de uma empresa no Streamlit!', width='stretch',text_alignment='center')
+st.header('Relatório sobre os departamentos da empresa no Streamlit!', width='stretch',text_alignment='center')
 
 df = pd.read_csv('funcionarios.csv')
 
@@ -19,7 +19,6 @@ dep = df['Departamento'].unique()
 
 df['Cargo'] = (df['Cargo']
     .str.strip()       
-    .str.lower()        
     .str.normalize('NFKD') 
     .str.encode('ascii', errors='ignore')
     .str.decode('utf-8')
@@ -83,7 +82,7 @@ st.metric(
     border=True,
     delta_arrow = "off",
 )
-st.header('Média salarial por tipo de contrato do setor', width='stretch',text_alignment='center')
+st.subheader('Média salarial por tipo de contrato do setor', width='stretch',text_alignment='center')
 
 st.bar_chart(
     df_contrato_salario,
@@ -94,11 +93,11 @@ st.bar_chart(
     color='Departamento',
 )
 
+st.subheader(f'Distribuição por Sexo — {dep_op}', width='stretch',text_alignment='center')
 
 fig = px.pie(
     df_dep,
     names='Sexo',
-    title=f'Distribuição por Sexo — {dep_op}',
     hole=0.3, 
 )
 
